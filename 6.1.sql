@@ -1,0 +1,27 @@
+DROP table MATHANG;
+ create table Quanly.MATHANG(
+MH INT PRIMARY KEY,
+TENHANG nvarchar(50),
+DVT DOUBLE,
+SLHC INT,
+GBHT DOUBLE 
+) ;
+
+CREATE TABLE Quanly.PHIEUNHAP(
+SP INT PRIMARY KEY,
+NGAYNHAP DATE,
+TENNCC nvarchar(50),
+MH INT,
+foreign key(MH) references MATHANG(MH)
+);
+
+create table Quanly.HDXUAT(
+SOHD INT PRIMARY KEY,
+NGAYBAN date,
+TENNMH NVARCHAR(50),
+MH INT,
+foreign key(MH) references MATHANG(MH)
+)
+
+
+ 
